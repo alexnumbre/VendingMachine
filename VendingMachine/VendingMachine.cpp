@@ -7,7 +7,7 @@ VendingMachine::VendingMachine(short slotCount)
 }
 void VendingMachine::loadTheSlot(SnackSlot slot)
 {
-    if (++count <= countOfTheSlots) 
+    if (count <= countOfTheSlots) 
     {
         count++;
         arrayForSlots[count-1] = slot.GetSnackList();
@@ -24,19 +24,26 @@ void VendingMachine::SetcountOfSlots(short num)
 {
     count = num;
 }
-void VendingMachine::getEmptySlotsCount()
+int VendingMachine::getEmptySlotsCount()
 {
-    int empty=0;
+    //cout << GetcountOfSlots() << endl;
+    int fulled=0;
 
-    for (int i = 0; i < GetcountOfSlots(); ++i)
+    for (int i = 0; i <= GetcountOfSlots(); ++i)
     {
-        if(arrayForSlots[i] == "")
+        if ((arrayForSlots[i] != "1") && (arrayForSlots[i] != ""))
         {
-            ++empty;
+            ++fulled;
         }
+
         
     }
-    cout << empty;
+    //cout << GetcountOfSlots() << endl;
+     return GetcountOfSlots()-fulled;
 }
 
-
+/*std::ostream& operator<< (std::ostream& out, VendingMachine& point)
+{
+    return out;
+}
+*/

@@ -11,7 +11,7 @@ public:
 	string GetSnackList();
 private:
 	short countInOneSlot;
-	string snacklist;
+	string snacklist="1";
 	int countsl = 0;
 
 

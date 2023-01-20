@@ -4,7 +4,7 @@
 SnackSlot::SnackSlot(short countOfOneSlot)
 {
 
-    this->countInOneSlot = countOfOneSlot;
+   this->countInOneSlot = countOfOneSlot;
 
 }
 void SnackSlot::addSnack(Snack* snack)

@@ -8,9 +8,10 @@ class VendingMachine
 public:
 	VendingMachine(short slotCount);
 	void loadTheSlot(SnackSlot slot);
-	void getEmptySlotsCount();
+	int getEmptySlotsCount();
 	int GetcountOfSlots();
 	void SetcountOfSlots(short num);
+	//friend std::ostream& operator<< (std::ostream& out, const VendingMachine& point);
 	
 private:
 	short countOfTheSlots;
